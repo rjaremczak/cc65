@@ -264,7 +264,7 @@ void g_restore_regvars (int StackOffs, int RegOffs, unsigned Bytes);
 
 
 
-void g_getimmed (unsigned Flags, unsigned long Val, long Offs);
+void g_getimmed (unsigned Flags, uintptr_t Val, long Offs);
 /* Load a constant into the primary register */
 
 void g_getstatic (unsigned Flags, uintptr_t Label, long Offs);
@@ -447,7 +447,7 @@ void g_ge (unsigned flags, unsigned long val);
 void g_res (unsigned n);
 /* Reserve static storage, n bytes */
 
-void g_defdata (unsigned flags, unsigned long val, long offs);
+void g_defdata (unsigned flags, uintptr_t val, long offs);
 /* Define data with the size given in flags */
 
 void g_defbytes (const void* bytes, unsigned count);
